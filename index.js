@@ -2,10 +2,13 @@ const copyNumbers = [];
 let copyCount = 0;
 let coinCount = 100;
 let heartCount = 0;
-function copy_Count() {
+function copy_Count(num) {
+    const number_a = document.getElementById(num).innerText;
+    alert('Number Copied : ' + number_a);
     copyCount++;
     let cpy = document.getElementById('copy-count');
     cpy.innerText = copyCount;
+    navigator.clipboard.writeText(number_a)
 
 }
 function addStore() {
@@ -45,56 +48,56 @@ function getNum(title, num) {
 
 document.getElementById('national-copy')
     .addEventListener('click', function () {
-        copy_Count()
+        copy_Count('national-num')
 
     });
 
 document.getElementById('police-copy')
     .addEventListener('click', function () {
-        copy_Count()
+        copy_Count('police-num')
 
     });
 
 document.getElementById('fire-copy')
     .addEventListener('click', function () {
-        copy_Count()
+        copy_Count('fire-num')
 
     });
 
 document.getElementById('ambulance-copy')
     .addEventListener('click', function () {
-        copy_Count()
+        copy_Count('ambulance-num')
 
     });
 
 document.getElementById('child-women-copy')
     .addEventListener('click', function () {
-        copy_Count()
+        copy_Count('child-women-num')
 
     });
 
 document.getElementById('anti-copy')
     .addEventListener('click', function () {
-        copy_Count()
+        copy_Count('anti-num')
 
     });
 
 document.getElementById('electricity-copy')
     .addEventListener('click', function () {
-        copy_Count()
+        copy_Count('electricity-num')
 
     });
 
 document.getElementById('brac-copy')
     .addEventListener('click', function () {
-        copy_Count()
+        copy_Count('brac-num')
 
     });
 
 
 document.getElementById('railway-copy')
     .addEventListener('click', function () {
-        copy_Count()
+        copy_Count('railway-num')
 
     });
 document.getElementById('clear-btn')
