@@ -1,16 +1,20 @@
 const copyNumbers = [];
-let copyCount=0;
-let coinCount=100;
-let heartCount=0;
-function coin_Count(){
-    coinCount-=20;
-    const totalCoin=document.getElementById('coin-count');
-    totalCoin.innerText=coinCount;
+let copyCount = 0;
+let coinCount = 100;
+let heartCount = 0;
+function coin_Count() {
+    if (coinCount < 20) {
+        alert('You do not have enough balance. You need at least 20 Coin to make a call.');
+        return;
+    }
+    coinCount -= 20;
+    const totalCoin = document.getElementById('coin-count');
+    totalCoin.innerText = coinCount;
 }
 function addStore(count) {
     const store = document.getElementById('store');
-    let cpy=document.getElementById('copy-count');
-    cpy.innerText=count;
+    let cpy = document.getElementById('copy-count');
+    cpy.innerText = count;
     store.innerHTML = "";
 
     for (const num of copyNumbers) {
@@ -30,7 +34,7 @@ function addStore(count) {
 }
 
 function getNum(title, num) {
-     copyCount++;
+    copyCount++;
     const numb = document.getElementById(num).innerText;
     const nam = document.getElementById(title).innerText;
     const data = {
@@ -45,130 +49,131 @@ function getNum(title, num) {
 
 document.getElementById('national-copy')
     .addEventListener('click', function () {
-        
+
         getNum('national-title', 'national-num');
     });
 
-    document.getElementById('police-copy')
+document.getElementById('police-copy')
     .addEventListener('click', function () {
-        
+
         getNum('police-title', 'police-num');
     });
 
-    document.getElementById('fire-copy')
+document.getElementById('fire-copy')
     .addEventListener('click', function () {
-        
+
         getNum('fire-title', 'fire-num');
     });
 
-    document.getElementById('ambulance-copy')
+document.getElementById('ambulance-copy')
     .addEventListener('click', function () {
-        
+
         getNum('ambulance-title', 'ambulance-num');
     });
 
-    document.getElementById('child-women-copy')
+document.getElementById('child-women-copy')
     .addEventListener('click', function () {
-        
+
         getNum('child-women-title', 'child-women-num');
     });
 
-    document.getElementById('anti-copy')
+document.getElementById('anti-copy')
     .addEventListener('click', function () {
-        
+
         getNum('anti-title', 'anti-num');
     });
 
-    document.getElementById('electricity-copy')
+document.getElementById('electricity-copy')
     .addEventListener('click', function () {
-        
+
         getNum('electricity-title', 'electricity-num');
     });
 
-    document.getElementById('brac-copy')
+document.getElementById('brac-copy')
     .addEventListener('click', function () {
-        
+
         getNum('brac-title', 'brac-num');
     });
 
 
 document.getElementById('railway-copy')
-.addEventListener('click', function () {
-    
-    getNum('railway-title', 'railway-num');
-});
+    .addEventListener('click', function () {
+
+        getNum('railway-title', 'railway-num');
+    });
 document.getElementById('clear-btn')
-.addEventListener('click', function(){
-    document.getElementById('store').innerHTML = ""; 
-    copyNumbers.length = 0; 
-    copyCount = 0;    
-    document.getElementById('copy-count').innerText = "0"; 
-});
+    .addEventListener('click', function () {
+        document.getElementById('store').innerHTML = "";
+        copyNumbers.length = 0;
+        copyCount = 0;
+        document.getElementById('copy-count').innerText = "0";
+    });
 
 //Call Functionality
 document.getElementById('national-call')
     .addEventListener('click', function () {
-coin_Count();        
-       
+        alert('Calling National Emergency Number 999.. ');
+
+    coin_Count();
     });
 
-    document.getElementById('police-call')
+document.getElementById('police-call')
     .addEventListener('click', function () {
-coin_Count();        
-       
+        alert('Calling Police Helpline Number 999...');
+    coin_Count();
     });
 
-    document.getElementById('fire-call')
+document.getElementById('fire-call')
     .addEventListener('click', function () {
-coin_Count();        
-       
+        alert('Calling Fire Service Number 999...');
+    coin_Count();
     });
 
-    document.getElementById('ambulance-call')
+document.getElementById('ambulance-call')
     .addEventListener('click', function () {
-coin_Count();        
-       
+        alert('Ambulance Service 1994-999999..');
+    coin_Count();
     });
 
-    document.getElementById('child-women-call')
+document.getElementById('child-women-call')
     .addEventListener('click', function () {
-coin_Count();        
-        
-    });
+alert('Calling Women & Child Helpline 109...')
+coin_Count();    
+});
 
-    document.getElementById('anti-call')
+document.getElementById('anti-call')
     .addEventListener('click', function () {
-coin_Count();        
-       
-    });
+alert('Calling Anti-Corruption Helpline 106...')
+coin_Count();    
+});
 
-    document.getElementById('electricity-call')
+document.getElementById('electricity-call')
     .addEventListener('click', function () {
-coin_Count();        
-        
-    });
+alert('Calling Electricity Helpline 16216....')
+coin_Count();    
+});
 
-    document.getElementById('brac-call')
+document.getElementById('brac-call')
     .addEventListener('click', function () {
-coin_Count();        
-       
-    });
+alert('Calling Brac Helpline 16445...')
+coin_Count();    
+});
 
 
 document.getElementById('railway-call')
-.addEventListener('click', function () {
+    .addEventListener('click', function () {
+alert('Calling Bangladesh Railway Helpline 163.. ');
 coin_Count();    
-    
 });
 
-const hearts=document.getElementsByClassName('heart-count');
+const hearts = document.getElementsByClassName('heart-count');
 
-for(const heart of hearts){
-console.log(heart);
-heart.addEventListener('click',function(){
-    heartCount++;
-    let heart_=document.getElementById('love-count');
-    heart_.innerText=heartCount;
-});
+for (const heart of hearts) {
+    console.log(heart);
+    heart.addEventListener('click', function () {
+        heartCount++;
+        let heart_ = document.getElementById('love-count');
+        heart_.innerText = heartCount;
+    });
 }
 
