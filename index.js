@@ -1,5 +1,11 @@
 const copyNumbers = [];
 let copyCount=0;
+let coinCount=100;
+function coin_Count(){
+    coinCount-=20;
+    const totalCoin=document.getElementById('coin-count');
+    totalCoin.innerText=coinCount;
+}
 function addStore(count) {
     const store = document.getElementById('store');
     let cpy=document.getElementById('copy-count');
@@ -90,15 +96,6 @@ document.getElementById('railway-copy')
     
     getNum('railway-title', 'railway-num');
 });
-
-
-
-
-
-
-
-
-
 document.getElementById('clear-btn')
 .addEventListener('click', function(){
     document.getElementById('store').innerHTML = ""; 
@@ -106,3 +103,60 @@ document.getElementById('clear-btn')
     copyCount = 0;    
     document.getElementById('copy-count').innerText = "0"; 
 });
+
+//Call Functionality
+document.getElementById('national-call')
+    .addEventListener('click', function () {
+coin_Count();        
+       
+    });
+
+    document.getElementById('police-call')
+    .addEventListener('click', function () {
+coin_Count();        
+       
+    });
+
+    document.getElementById('fire-call')
+    .addEventListener('click', function () {
+coin_Count();        
+       
+    });
+
+    document.getElementById('ambulance-call')
+    .addEventListener('click', function () {
+coin_Count();        
+       
+    });
+
+    document.getElementById('child-women-call')
+    .addEventListener('click', function () {
+coin_Count();        
+        
+    });
+
+    document.getElementById('anti-call')
+    .addEventListener('click', function () {
+coin_Count();        
+       
+    });
+
+    document.getElementById('electricity-call')
+    .addEventListener('click', function () {
+coin_Count();        
+        
+    });
+
+    document.getElementById('brac-call')
+    .addEventListener('click', function () {
+coin_Count();        
+       
+    });
+
+
+document.getElementById('railway-call')
+.addEventListener('click', function () {
+coin_Count();    
+    
+});
+
