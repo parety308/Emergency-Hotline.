@@ -1,6 +1,7 @@
 const copyNumbers = [];
 let copyCount=0;
 let coinCount=100;
+let heartCount=0;
 function coin_Count(){
     coinCount-=20;
     const totalCoin=document.getElementById('coin-count');
@@ -159,4 +160,15 @@ document.getElementById('railway-call')
 coin_Count();    
     
 });
+
+const hearts=document.getElementsByClassName('heart-count');
+
+for(const heart of hearts){
+console.log(heart);
+heart.addEventListener('click',function(){
+    heartCount++;
+    let heart_=document.getElementById('love-count');
+    heart_.innerText=heartCount;
+});
+}
 
