@@ -121,7 +121,7 @@ Returns all elements that match the CSS selector.
 Returns a NodeList (can be empty if nothing matches).
 
 You can loop through it with forEach, for..of, or convert it to an array.
-
+```
 ---
 ## 👨‍💻 Author
 
